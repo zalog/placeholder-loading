@@ -1,0 +1,109 @@
+.ph-item {
+  &, *,
+  ::after, ::before {
+    box-sizing: border-box;
+  }
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $ph-gutter ($ph-gutter / 2) ($ph-gutter - $ph-spacer) ($ph-gutter / 2);
+  overflow: hidden;
+  margin-bottom: $ph-gutter;
+  background-color: $ph-bg;
+  border: 1px solid darken($ph-bg, 10%);
+  border-radius: $ph-border-radius;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    width: 500%;
+    margin-left: -250%;
+    animation: phAnimation .8s linear infinite;
+    background: linear-gradient(to right, transparent 46%, rgba($ph-bg, .35) 50%, transparent 54%) 50% 50%;
+  }
+
+  > * {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+    padding-right: ($ph-gutter / 2);
+    padding-left: ($ph-gutter / 2);
+  }
+}
+
+.ph-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: ($ph-spacer / 2);
+
+  div {
+    height: 10px;
+    margin-bottom: ($ph-spacer / 2);
+    background-color: $ph-color;
+  }
+  .big,
+  &.big div {
+    height: 20px;
+    margin-bottom: $ph-spacer;
+  }
+  .empty {
+    background-color: transparent;
+  }
+}
+
+.ph-col-2 {
+  flex: 0 0 percentage(2 / 12);
+}
+.ph-col-4 {
+  flex: 0 0 percentage(4 / 12);
+}
+.ph-col-6 {
+  flex: 0 0 percentage(6 / 12);
+}
+.ph-col-8 {
+  flex: 0 0 percentage(8 / 12);
+}
+.ph-col-10 {
+  flex: 0 0 percentage(10 / 12);
+}
+.ph-col-12 {
+  flex: 0 0 percentage(12 / 12);
+}
+
+.ph-avatar {
+  position: relative;
+  width: 100%;
+  min-width: 60px;
+  background-color: $ph-color;
+  margin-bottom: $ph-spacer;
+  border-radius: $ph-avatar-border-radius;
+  overflow: hidden;
+
+  &::before {
+    content: " ";
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.ph-picture {
+  width: 100%;
+  height: 120px;
+  background-color: $ph-color;
+  margin-bottom: $ph-spacer;
+}
+
+@keyframes phAnimation {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+  100% {
+    transform: translate3d(30%, 0, 0);
+  }
+}
