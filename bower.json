@@ -1,0 +1,23 @@
+{
+  "name": "placeholder-loading",
+  "description": "Simple and flexible, css only, content placeholder loading animation.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Zalog (http://www.zalog.ro/)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "placeholder",
+    "content",
+    "flex",
+    "scss"
+  ],
+  "homepage": "https://github.com/zalog/placeholder-loading",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
