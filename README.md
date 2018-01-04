@@ -10,13 +10,13 @@ Take a look at this examples, but keep in mind that it's flexible enough to play
 
 You can change the order, add avatar or image, change text bar sizes, etc.
 
-![placeholder loading demo 1](imgs/placeholder-loading-demo-1.gif)
+![placeholder loading demo 1](docs/imgs/placeholder-loading-demo-1.gif)
 
-![placeholder loading demo 2](imgs/placeholder-loading-demo-2.gif)
+![placeholder loading demo 2](docs/imgs/placeholder-loading-demo-2.gif)
 
-![placeholder loading demo 3](imgs/placeholder-loading-demo-3.gif)
+![placeholder loading demo 3](docs/imgs/placeholder-loading-demo-3.gif)
 
-![placeholder loading demo 4](imgs/placeholder-loading-demo-4.gif)
+![placeholder loading demo 4](docs/imgs/placeholder-loading-demo-4.gif)
 
 ## Installing
 
