@@ -39,6 +39,10 @@ $ph-spacer:               15px !default;
 $ph-avatar-border-radius: 50% !default;
 ```
 
+### Via bower
+
+Just replace npm with bower: `bower install placeholder-loading --save`
+
 ### Via cdn
 - https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css
 - or https://cdn.jsdelivr.net/npm/placeholder-loading/dist/css/placeholder-loading.min.css
