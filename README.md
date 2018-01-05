@@ -11,15 +11,15 @@ Take a look at this examples, but keep in mind that it's flexible enough to play
 You can change the order, add avatar or image, change text bar sizes, etc.
 
 <p align="center">
-    <img src="docs/imgs/placeholder-loading-demo-1.gif" width="570" height="278">
+    <img src="docs/imgs/placeholder-loading-demo-1.gif">
 </p>
 
 <p align="center">
-    <img src="docs/imgs/placeholder-loading-demo-2.gif" width="570" height="303">
+    <img src="docs/imgs/placeholder-loading-demo-2.gif">
 </p>
 
 <p align="center">
-    <img src="docs/imgs/placeholder-loading-demo-3.gif" width="570" height="353">
+    <img src="docs/imgs/placeholder-loading-demo-3.gif">
 </p>
 
 ## Installing
@@ -38,6 +38,10 @@ $ph-spacer:               15px !default;
 
 $ph-avatar-border-radius: 50% !default;
 ```
+
+### Via bower
+
+Just replace npm with bower: `bower install placeholder-loading --save`
 
 ### Via cdn
 - https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css
