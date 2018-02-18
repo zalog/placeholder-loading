@@ -25,7 +25,7 @@
     width: 500%;
     margin-left: -250%;
     animation: phAnimation .8s linear infinite;
-    background: linear-gradient(to right, transparent 46%, rgba($ph-bg, .35) 50%, transparent 54%) 50% 50%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 46%, rgba($ph-bg, .35) 50%, rgba(255,255,255,0) 54%) 50% 50%;
   }
 
   > * {
@@ -53,7 +53,7 @@
     margin-bottom: $ph-spacer;
   }
   .empty {
-    background-color: transparent;
+    background-color: rgba(255,255,255,0);
   }
 }
 
