@@ -37,6 +37,8 @@ $ph-gutter:               30px !default;
 $ph-spacer:               15px !default;
 
 $ph-avatar-border-radius: 50% !default;
+
+$ph-animation-duration:   .8s !default;
 ```
 
 ### Via bower
