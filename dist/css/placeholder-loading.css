@@ -1,6 +1,6 @@
 /**
- * placeholder-loading v0.1.5
- * Author: Zalog (http://www.zalog.ro/)
+ * placeholder-loading v0.2.0
+ * Author: Zalog (https://www.zalog.ro/)
  * License: MIT
  **/
 .ph-item {
@@ -30,8 +30,8 @@
     z-index: 1;
     width: 500%;
     margin-left: -250%;
-    -webkit-animation: phAnimation .8s linear infinite;
-            animation: phAnimation .8s linear infinite;
+    -webkit-animation: phAnimation 0.8s linear infinite;
+            animation: phAnimation 0.8s linear infinite;
     background: -webkit-gradient(linear, left top, right top, color-stop(46%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.35)), color-stop(54%, rgba(255, 255, 255, 0))) 50% 50%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%; }
   .ph-item > * {

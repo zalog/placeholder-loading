@@ -1,6 +1,6 @@
 {
   "name": "placeholder-loading",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
@@ -13,7 +13,7 @@
     "flex",
     "scss"
   ],
-  "author": "Zalog (http://www.zalog.ro/)",
+  "author": "Zalog (https://www.zalog.ro/)",
   "license": "MIT",
   "repository": {
     "type": "git",
