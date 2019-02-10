@@ -45,7 +45,7 @@ var copyChanged = function(obj) {
 
 
 
-gulp.task('clean', function() {
+function clean() {
   return del(
       [
         dist + '/**/*',
@@ -53,21 +53,21 @@ gulp.task('clean', function() {
       ],
       {force: true}
     );
-});
+}
 
-gulp.task('html', function() {
+function html() {
   return gulp.src(src + '/*.html')
     .pipe(gulp.dest(dist));
-});
+}
 
-gulp.task('css-compile', function() {
+function cssCompile() {
   return gulp.src(src + '/scss/placeholder-loading.scss')
     .pipe(csscompile())
     .pipe(gulp.dest(dist + '/css/'))
     .pipe(browsersync.stream());
-});
+}
 
-gulp.task('css', ['css-compile'], function() {
+function cssOptimize() {
   return gulp.src(dist + '/css/placeholder-loading.css')
     .pipe(postcss([
       autoprefixer({browsers: ['last 2 versions']})
@@ -82,31 +82,37 @@ gulp.task('css', ['css-compile'], function() {
     .pipe(header(banner))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dist + '/css/'));
-});
+}
 
-gulp.task('serve', function() {
-  return browsersync.init({
+const css = gulp.series(cssCompile, cssOptimize);
+
+function serve() {
+  browsersync.init({
     server: dist,
     notify: false,
     reloadDelay: 500,
     ghostMode: false
   });
-});
+}
 
-gulp.task('watch', function() {
+function watch() {
   gulp.watch(src + '/*.html', copyChanged);
-  gulp.watch(src + '/scss/**/*', ['css-compile']);
+  gulp.watch(src + '/scss/**/*', cssCompile);
 
   gulp.watch(dist + "/*.html").on('change', browsersync.reload);
-});
+}
 
 
 
-gulp.task('dev', ['html', 'css-compile']);
-gulp.task('dist', ['clean'], function() {
-  gulp.start(['html', 'css']);
-});
+// grouped tasks by use case
+const dev = gulp.parallel(html, cssCompile);
+const build = gulp.series(clean, html, css);
 
-gulp.task('default', ['dev', 'serve'], function() {
-  gulp.start(['watch']);
-});
+
+
+exports.build = build;
+exports.serve = serve;
+exports.default = gulp.parallel(
+  gulp.series(dev, serve),
+  watch
+);

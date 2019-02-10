@@ -1,10 +1,10 @@
 {
   "name": "placeholder-loading",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
-    "dist": "gulp dist",
+    "build": "gulp build",
     "serve": "gulp serve"
   },
   "keywords": [
@@ -13,7 +13,7 @@
     "flex",
     "scss"
   ],
-  "author": "Zalog (http://www.zalog.ro/)",
+  "author": "Zalog (https://www.zalog.ro/)",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,11 +24,11 @@
   },
   "homepage": "https://github.com/zalog/placeholder-loading#readme",
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
-    "browser-sync": "^2.24.7",
-    "cssnano": "^4.1.0",
+    "autoprefixer": "^9.4.7",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.8",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-header": "^2.0.5",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
