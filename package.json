@@ -4,7 +4,7 @@
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
-    "dist": "gulp dist",
+    "build": "gulp build",
     "serve": "gulp serve"
   },
   "keywords": [
@@ -28,7 +28,7 @@
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.8",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-header": "^2.0.5",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
