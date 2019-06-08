@@ -70,13 +70,13 @@ function cssCompile() {
 function cssOptimize() {
   return gulp.src(dist + '/css/placeholder-loading.css')
     .pipe(postcss([
-      autoprefixer({browsers: ['last 2 versions']})
+      autoprefixer()
     ]))
     .pipe(header(banner))
     .pipe(gulp.dest(dist + '/css/'))
     // min
     .pipe(postcss([
-      autoprefixer({browsers: ['last 2 versions']}),
+      autoprefixer(),
       cssnano()
     ]))
     .pipe(header(banner))
