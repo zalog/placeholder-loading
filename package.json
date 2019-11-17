@@ -1,12 +1,13 @@
 {
   "name": "placeholder-loading",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
     "serve": "gulp serve",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "v": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); branch=${branch#release/}; npm --no-git-tag-version version ${branch} && git add package.json package-lock.json && git commit -m \"build: bumps version ${branch}\""
   },
   "keywords": [
     "placeholder",
@@ -24,9 +25,6 @@
     "url": "https://github.com/zalog/placeholder-loading/issues"
   },
   "homepage": "https://github.com/zalog/placeholder-loading#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "devDependencies": {
     "autoprefixer": "^9.7.1",
     "browser-sync": "^2.26.7",
