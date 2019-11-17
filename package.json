@@ -6,7 +6,8 @@
     "start": "gulp",
     "build": "gulp build",
     "serve": "gulp serve",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "v": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); branch=${branch#release/}; npm --no-git-tag-version version ${branch} && git add package.json package-lock.json && git commit -m \"build: bumps version ${branch}\""
   },
   "keywords": [
     "placeholder",
