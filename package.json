@@ -24,9 +24,6 @@
     "url": "https://github.com/zalog/placeholder-loading/issues"
   },
   "homepage": "https://github.com/zalog/placeholder-loading#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "devDependencies": {
     "autoprefixer": "^9.7.1",
     "browser-sync": "^2.26.7",
