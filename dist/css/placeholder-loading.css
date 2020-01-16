@@ -4,6 +4,7 @@
  * License: MIT
  **/
 .ph-item {
+  direction: ltr;
   position: relative;
   display: flex;
   flex-wrap: wrap;
