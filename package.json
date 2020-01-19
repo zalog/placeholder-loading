@@ -1,13 +1,17 @@
 {
   "name": "placeholder-loading",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
     "serve": "gulp serve",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
-    "v": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); branch=${branch#release/}; npm --no-git-tag-version version ${branch} && git add package.json package-lock.json && git commit -m \"build: bumps version ${branch}\""
+    "commit:version": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); branch=${branch#release/}; npm --no-git-tag-version version ${branch} && git add package.json package-lock.json && git commit -m \"build: bumps version ${branch}\"",
+    "commit:build": "npm run build && git add dist && git commit -m \"build: runs 'npm run build'\"",
+    "commit": "npm run commit:version && npm run commit:build",
+    "deploy:github": "git subtree push --prefix dist origin gh-pages",
+    "deploy:npm": "npm publish",
+    "deploy": "npm run deploy:github && npm run deploy:npm"
   },
   "keywords": [
     "placeholder",
@@ -26,14 +30,14 @@
   },
   "homepage": "https://github.com/zalog/placeholder-loading#readme",
   "devDependencies": {
-    "autoprefixer": "^9.7.1",
+    "autoprefixer": "^9.7.4",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-util": "^3.0.8"
   }
