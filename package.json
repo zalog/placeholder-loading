@@ -1,6 +1,6 @@
 {
   "name": "placeholder-loading",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
