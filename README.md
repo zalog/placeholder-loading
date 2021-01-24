@@ -35,6 +35,7 @@ $ph-border-radius:        2px !default;
 
 $ph-gutter:               30px !default;
 $ph-spacer:               15px !default;
+$ph-item-border:          1px solid darken($ph-bg, 10%) !default;
 
 $ph-avatar-border-radius: 50% !default;
 
@@ -76,7 +77,9 @@ A simple html markup would be something like this:
 </div>
 ```
 
-- grid classes: `.ph-col-2`, `.ph-col-4`, `.ph-col-6`, `.ph-col-8`, `.ph-col-10`, `.ph-col-12`
+Use `<div class="ph-item clean"></div>` if you prefer to have no wrapper (background, border, margin) around.
+
+- grid classes: `.ph-col-1`, `.ph-col-2`, `.ph-col-3`, `.ph-col-4`, `.ph-col-5`, `.ph-col-6`, `.ph-col-7`, `.ph-col-8`, `.ph-col-9`, `.ph-col-10`, `.ph-col-11`, `.ph-col-12`
 
 - elements inside: `.ph-avatar` and `.ph-picture`
 
@@ -95,7 +98,7 @@ A simple html markup would be something like this:
 
 ## Contributing
 
-Please read angular's [CONTRIBUTING.md](https://github.com/angular/angular/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read Angular's [CONTRIBUTING.md](https://github.com/angular/angular/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
