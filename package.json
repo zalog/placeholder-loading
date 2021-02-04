@@ -1,6 +1,6 @@
 {
   "name": "placeholder-loading",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
@@ -30,15 +30,16 @@
   },
   "homepage": "https://github.com/zalog/placeholder-loading#readme",
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "browser-sync": "^2.26.7",
+    "autoprefixer": "^10.2.4",
+    "browser-sync": "^2.26.14",
     "cssnano": "^4.1.10",
-    "del": "^5.1.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",
-    "gulp-postcss": "^8.0.0",
+    "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-util": "^3.0.8"
+    "gulp-sass": "^4.1.0",
+    "gulp-util": "^3.0.8",
+    "postcss": "^8.2.4"
   }
 }
