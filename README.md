@@ -31,11 +31,11 @@ You can change the order, add avatar or image, change text bar sizes, etc.
 ```scss
 $ph-bg:                   #fff !default;
 $ph-color:                #ced4da !default;
+$ph-border:               1px solid darken($ph-bg, 10%) !default;
 $ph-border-radius:        2px !default;
 
 $ph-gutter:               30px !default;
 $ph-spacer:               15px !default;
-$ph-item-border:          1px solid darken($ph-bg, 10%) !default;
 
 $ph-avatar-border-radius: 50% !default;
 
