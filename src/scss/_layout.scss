@@ -37,17 +37,6 @@
     padding-right: ($ph-gutter / 2);
     padding-left: ($ph-gutter / 2);
   }
-
-  &.clean {
-    padding: 0;
-    background: transparent;
-    border: 0 transparent;
-    margin: 0;
-
-    > * {
-      padding: 0;
-    }
-  }
 }
 
 .ph-row {

@@ -77,8 +77,6 @@ A simple html markup would be something like this:
 </div>
 ```
 
-Use `<div class="ph-item clean"></div>` if you prefer to have no wrapper (background, border, margin) around.
-
 - grid classes: `.ph-col-2`, `.ph-col-4`, `.ph-col-6`, `.ph-col-8`, `.ph-col-10`, `.ph-col-12`
 
 - elements inside: `.ph-avatar` and `.ph-picture`
