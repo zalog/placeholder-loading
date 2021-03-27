@@ -29,6 +29,7 @@ You can change the order, add avatar or image, change text bar sizes, etc.
 - `@import "~/node_modules/placeholder-loading/src/scss/placeholder-loading";` - please modify the path accordingly
 - change sass variables if you need so:
 ```scss
+$ph-direction:            ltr !default;
 $ph-bg:                   #fff !default;
 $ph-color:                #ced4da !default;
 $ph-border:               1px solid darken($ph-bg, 10%) !default;
