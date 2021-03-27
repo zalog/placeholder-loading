@@ -1,4 +1,4 @@
-$ph-direction:            ltr;
+$ph-direction:            ltr !default;
 $ph-bg:                   #fff !default;
 $ph-color:                #ced4da !default;
 $ph-border:               1px solid darken($ph-bg, 10%) !default;
