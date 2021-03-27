@@ -78,13 +78,16 @@
   flex: 0 0 percentage(12 / 12);
 }
 
-[class*="ph-col"] > * {
-  + .ph-row {
-    margin-top: 0;
-  }
+[class*="ph-col"] {
+  direction: $ph-direction;
+  > * {
+    + .ph-row {
+      margin-top: 0;
+    }
 
-  + * {
-    margin-top: ($ph-spacer / 2);
+    + * {
+      margin-top: ($ph-spacer / 2);
+    }
   }
 }
 
