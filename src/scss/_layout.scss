@@ -12,11 +12,12 @@
   overflow: hidden;
   margin-bottom: $ph-gutter;
   background-color: $ph-bg;
-  border: 1px solid darken($ph-bg, 10%);
+  border: $ph-border;
   border-radius: $ph-border-radius;
 
   &::before {
     content: " ";
+    pointer-events: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -35,23 +36,23 @@
     flex-flow: column;
     padding-right: ($ph-gutter / 2);
     padding-left: ($ph-gutter / 2);
+    margin-bottom: $ph-spacer;
   }
 }
 
 .ph-row {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: ($ph-spacer / 2);
+  margin-top: -($ph-spacer / 2);
 
   div {
     height: 10px;
-    margin-bottom: ($ph-spacer / 2);
+    margin-top: ($ph-spacer / 2);
     background-color: $ph-color;
   }
   .big,
   &.big div {
     height: 20px;
-    margin-bottom: $ph-spacer;
   }
   .empty {
     background-color: rgba($ph-bg, 0);
@@ -77,12 +78,21 @@
   flex: 0 0 percentage(12 / 12);
 }
 
+[class*="ph-col"] > * {
+  + .ph-row {
+    margin-top: 0;
+  }
+
+  + * {
+    margin-top: ($ph-spacer / 2);
+  }
+}
+
 .ph-avatar {
   position: relative;
   width: 100%;
   min-width: 60px;
   background-color: $ph-color;
-  margin-bottom: $ph-spacer;
   border-radius: $ph-avatar-border-radius;
   overflow: hidden;
 
@@ -97,7 +107,6 @@
   width: 100%;
   height: 120px;
   background-color: $ph-color;
-  margin-bottom: $ph-spacer;
 }
 
 @keyframes phAnimation {

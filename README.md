@@ -31,6 +31,7 @@ You can change the order, add avatar or image, change text bar sizes, etc.
 ```scss
 $ph-bg:                   #fff !default;
 $ph-color:                #ced4da !default;
+$ph-border:               1px solid darken($ph-bg, 10%) !default;
 $ph-border-radius:        2px !default;
 
 $ph-gutter:               30px !default;
@@ -95,7 +96,7 @@ A simple html markup would be something like this:
 
 ## Contributing
 
-Please read angular's [CONTRIBUTING.md](https://github.com/angular/angular/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read Angular's [CONTRIBUTING.md](https://github.com/angular/angular/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
