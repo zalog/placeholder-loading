@@ -78,6 +78,8 @@
   flex: 0 0 percentage(12 / 12);
 }
 
+// TODO make this a `.ph-wrap` class for no padding, no background, no animation,
+// and remove direction from `.ph-item`. This is a breaking change
 [class*="ph-col"] {
   direction: $ph-direction;
   > * {
