@@ -59,23 +59,18 @@
   }
 }
 
-.ph-col-2 {
-  flex: 0 0 percentage(2 / 12);
+@mixin ph-make-col($size, $columns) {
+  .ph-col-#{$size} {
+    flex: 0 0 percentage($size / $columns);
+  }
 }
-.ph-col-4 {
-  flex: 0 0 percentage(4 / 12);
-}
-.ph-col-6 {
-  flex: 0 0 percentage(6 / 12);
-}
-.ph-col-8 {
-  flex: 0 0 percentage(8 / 12);
-}
-.ph-col-10 {
-  flex: 0 0 percentage(10 / 12);
-}
-.ph-col-12 {
-  flex: 0 0 percentage(12 / 12);
+
+@for $i from 1 through $ph-cols {
+  @if $ph-cols-remove-odd and $i % 2 == 0 {
+    @include ph-make-col($i, $ph-cols);
+  } @else if not $ph-cols-remove-odd {
+    @include ph-make-col($i, $ph-cols);
+  }
 }
 
 // TODO make this a `.ph-wrap` class for no padding, no background, no animation,
