@@ -4,7 +4,7 @@
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
+    "build": "NODE_ENV=production gulp build",
     "serve": "gulp serve",
     "commit:version": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); branch=${branch#release/}; npm --no-git-tag-version version ${branch} && git add package.json package-lock.json && git commit -m \"build: bumps version ${branch}\"",
     "commit:build": "npm run build && git add dist && git commit -m \"build: runs 'npm run build'\"",

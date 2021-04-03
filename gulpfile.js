@@ -43,7 +43,7 @@ const copyFile = (file) => {
     .on('end', () => gulputil.log('Finished', "'" + gulputil.colors.cyan('copyFile') + "'", file) );
 };
 
-
+const isProduction = (process.env.NODE_ENV === 'production') ? true : false;
 
 const clean = () => del(
   [
@@ -56,27 +56,31 @@ const clean = () => del(
 const html = () => gulp.src(src + '/*.html')
   .pipe(gulp.dest(dist));
 
-const cssCompile = () => gulp.src(src + '/scss/placeholder-loading.scss')
-  .pipe(csscompile())
-  .pipe(gulp.dest(dist + '/css/'))
-  .pipe(browsersync.stream());
+function css() {
+  const stream = gulp.src(src + '/scss/placeholder-loading.scss')
+    .pipe(csscompile())
 
-const cssOptimize = () => gulp.src(dist + '/css/placeholder-loading.css')
-  .pipe(postcss([
-    autoprefixer()
-  ]))
-  .pipe(header(banner))
-  .pipe(gulp.dest(dist + '/css/'))
-  // min
-  .pipe(postcss([
-    autoprefixer(),
-    cssnano()
-  ]))
-  .pipe(header(banner))
-  .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest(dist + '/css/'));
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(header(banner))
+    .pipe(gulp.dest(dist + '/css/'));
 
-const css = gulp.series(cssCompile, cssOptimize);
+  if (isProduction) {
+    stream
+      .pipe(postcss([
+        autoprefixer(),
+        cssnano()
+      ]))
+      .pipe(header(banner))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(dist + '/css/'));
+  }
+
+  stream.pipe(browsersync.stream());
+
+  return stream;
+}
 
 const serve = () => browsersync.init({
   server: dist,
@@ -89,15 +93,16 @@ const serve = () => browsersync.init({
 const watch = () => {
   gulp.watch(src + '/*.html')
     .on('change', copyFile);
-  gulp.watch(src + '/scss/**/*', cssCompile);
+  gulp.watch(src + '/scss/**/*')
+    .on('change', gulp.series(css));
 
-  gulp.watch(dist + "/*.html").on('change', browsersync.reload);
+  gulp.watch(dist + "/*.html")
+    .on('change', browsersync.reload);
 }
 
 
 
 // grouped tasks by use case
-const dev = gulp.parallel(html, cssCompile);
 const build = gulp.series(clean, html, css);
 
 
@@ -105,6 +110,6 @@ const build = gulp.series(clean, html, css);
 exports.build = build;
 exports.serve = serve;
 exports.default = gulp.parallel(
-  gulp.series(dev, serve),
+  gulp.series(build, serve),
   watch
 );
