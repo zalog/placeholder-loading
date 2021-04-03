@@ -35,12 +35,12 @@ if ( contributors ) banner.push(contributors);
 banner.push(" **/", "");
 banner = banner.join("\n");
 
-const copyChanged = (file) => {
+const copyFile = (file) => {
   if (!file) return;
 
   return gulp.src(file, {base: src})
     .pipe(gulp.dest(dist))
-    .on('end', () => gulputil.log('Finished', "'" + gulputil.colors.cyan('copyChanged') + "'", file) );
+    .on('end', () => gulputil.log('Finished', "'" + gulputil.colors.cyan('copyFile') + "'", file) );
 };
 
 
@@ -87,7 +87,7 @@ const serve = () => browsersync.init({
 
 const watch = () => {
   gulp.watch(src + '/*.html')
-    .on('change', copyChanged);
+    .on('change', copyFile);
   gulp.watch(src + '/scss/**/*', cssCompile);
 
   gulp.watch(dist + "/*.html").on('change', browsersync.reload);
