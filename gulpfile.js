@@ -82,7 +82,8 @@ const serve = () => browsersync.init({
   server: dist,
   notify: false,
   reloadDelay: 500,
-  ghostMode: false
+  ghostMode: false,
+  open: false
 });
 
 const watch = () => {
