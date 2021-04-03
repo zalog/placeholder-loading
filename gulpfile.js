@@ -35,12 +35,12 @@ var contributors = (function() {
   banner.push(" **/", "");
   banner = banner.join("\n");
 
-var copyChanged = function(obj) {
-  if ( obj.type === 'changed') {
-    return gulp.src(obj.path, {base: src})
-      .pipe(gulp.dest(dist))
-      .on('end', () => gulputil.log('Finished', "'" + gulputil.colors.cyan('copyChanged') + "'", obj.path) );
-  }
+var copyChanged = function(file) {
+  if (!file) return;
+
+  return gulp.src(file, {base: src})
+    .pipe(gulp.dest(dist))
+    .on('end', () => gulputil.log('Finished', "'" + gulputil.colors.cyan('copyChanged') + "'", file) );
 };
 
 
@@ -96,7 +96,8 @@ function serve() {
 }
 
 function watch() {
-  gulp.watch(src + '/*.html', copyChanged);
+  gulp.watch(src + '/*.html')
+    .on('change', copyChanged);
   gulp.watch(src + '/scss/**/*', cssCompile);
 
   gulp.watch(dist + "/*.html").on('change', browsersync.reload);
