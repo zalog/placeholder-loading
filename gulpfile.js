@@ -16,87 +16,87 @@ const src = './src';
 const dist = './dist';
 
 const contributors = (() => {
-  if ( typeof packageJson.contributors == "undefined" ) return false;
-  let output = '';
-  for (let i = 0; i < packageJson.contributors.length; i++) {
-    if ( i > 0 ) output += ", ";
-    output += packageJson.contributors[i];
-  }
-  return " * Contributors: " + output;
+    if ( typeof packageJson.contributors == "undefined" ) return false;
+    let output = '';
+    for (let i = 0; i < packageJson.contributors.length; i++) {
+        if ( i > 0 ) output += ", ";
+        output += packageJson.contributors[i];
+    }
+    return " * Contributors: " + output;
 })();
 let banner = [
-  "/**",
-  " * " + packageJson.name + " v" + packageJson.version,
-  " * Author: " + packageJson.author,
-  " * License: " + packageJson.license
+    "/**",
+    " * " + packageJson.name + " v" + packageJson.version,
+    " * Author: " + packageJson.author,
+    " * License: " + packageJson.license
 ];
 if ( contributors ) banner.push(contributors);
 banner.push(" **/", "");
 banner = banner.join("\n");
 
 const copyFile = (file) => {
-  if (!file) return;
+    if (!file) return;
 
-  return gulp.src(file, {base: src})
-    .pipe(gulp.dest(dist))
-    .on('end', () => console.log(`[${new Date().toTimeString().split(' ')[0]}] Finished 'copyFile' ${file}`) );
+    return gulp.src(file, {base: src})
+        .pipe(gulp.dest(dist))
+        .on('end', () => console.log(`[${new Date().toTimeString().split(' ')[0]}] Finished 'copyFile' ${file}`) );
 };
 
 const isProduction = (process.env.NODE_ENV === 'production') ? true : false;
 
 const clean = () => del(
-  [
-    dist + '/**/*',
-    '!' + dist + '/.git/'
-  ],
-  {force: true}
+    [
+        dist + '/**/*',
+        '!' + dist + '/.git/'
+    ],
+    {force: true}
 );
 
 const html = () => gulp.src(src + '/*.html')
-  .pipe(gulp.dest(dist));
+    .pipe(gulp.dest(dist));
 
 function css() {
-  const stream = gulp.src(src + '/scss/placeholder-loading.scss')
-    .pipe(csscompile())
+    const stream = gulp.src(src + '/scss/placeholder-loading.scss')
+        .pipe(csscompile())
 
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(header(banner))
-    .pipe(gulp.dest(dist + '/css/'));
+        .pipe(postcss([
+            autoprefixer()
+        ]))
+        .pipe(header(banner))
+        .pipe(gulp.dest(dist + '/css/'));
 
-  if (isProduction) {
-    stream
-      .pipe(postcss([
-        autoprefixer(),
-        cssnano()
-      ]))
-      .pipe(header(banner))
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(dist + '/css/'));
-  }
+    if (isProduction) {
+        stream
+            .pipe(postcss([
+                autoprefixer(),
+                cssnano()
+            ]))
+            .pipe(header(banner))
+            .pipe(rename({suffix: '.min'}))
+            .pipe(gulp.dest(dist + '/css/'));
+    }
 
-  stream.pipe(browsersync.stream());
+    stream.pipe(browsersync.stream());
 
-  return stream;
+    return stream;
 }
 
 const serve = () => browsersync.init({
-  server: dist,
-  notify: false,
-  reloadDelay: 500,
-  ghostMode: false,
-  open: false
+    server: dist,
+    notify: false,
+    reloadDelay: 500,
+    ghostMode: false,
+    open: false
 });
 
 const watch = () => {
-  gulp.watch(src + '/*.html')
-    .on('change', copyFile);
-  gulp.watch(src + '/scss/**/*')
-    .on('change', gulp.series(css));
+    gulp.watch(src + '/*.html')
+        .on('change', copyFile);
+    gulp.watch(src + '/scss/**/*')
+        .on('change', gulp.series(css));
 
-  gulp.watch(dist + "/*.html")
-    .on('change', browsersync.reload);
+    gulp.watch(dist + "/*.html")
+        .on('change', browsersync.reload);
 }
 
 
@@ -109,6 +109,6 @@ const build = gulp.series(clean, html, css);
 exports.build = build;
 exports.serve = serve;
 exports.default = gulp.parallel(
-  gulp.series(build, serve),
-  watch
+    gulp.series(build, serve),
+    watch
 );
