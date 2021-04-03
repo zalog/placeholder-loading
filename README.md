@@ -54,7 +54,7 @@ Just replace npm with bower: `bower install placeholder-loading --save`
 - or https://cdn.jsdelivr.net/npm/placeholder-loading/dist/css/placeholder-loading.min.css
 ```html
 <head>
-  <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
 </head>
 ```
 
