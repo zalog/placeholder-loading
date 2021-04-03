@@ -4,7 +4,7 @@
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
+    "build": "NODE_ENV=production gulp build",
     "serve": "gulp serve",
     "commit:version": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); branch=${branch#release/}; npm --no-git-tag-version version ${branch} && git add package.json package-lock.json && git commit -m \"build: bumps version ${branch}\"",
     "commit:build": "npm run build && git add dist && git commit -m \"build: runs 'npm run build'\"",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/zalog/placeholder-loading#readme",
   "devDependencies": {
-    "autoprefixer": "^10.2.4",
+    "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "cssnano": "^4.1.10",
     "del": "^6.0.0",
@@ -39,7 +39,6 @@
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-util": "^3.0.8",
-    "postcss": "^8.2.4"
+    "postcss": "^8.2.9"
   }
 }
