@@ -39,7 +39,6 @@
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-util": "^3.0.8",
     "postcss": "^8.2.9"
   }
 }

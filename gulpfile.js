@@ -9,7 +9,6 @@ const header = require('gulp-header');
 const rename = require('gulp-rename');
 const del = require('del');
 const browsersync = require('browser-sync').create();
-const gulputil = require('gulp-util');
 
 const packageJson = require('./package.json');
 
@@ -40,7 +39,7 @@ const copyFile = (file) => {
 
   return gulp.src(file, {base: src})
     .pipe(gulp.dest(dist))
-    .on('end', () => gulputil.log('Finished', "'" + gulputil.colors.cyan('copyFile') + "'", file) );
+    .on('end', () => console.log(`[${new Date().toTimeString().split(' ')[0]}] Finished 'copyFile' ${file}`) );
 };
 
 const isProduction = (process.env.NODE_ENV === 'production') ? true : false;
