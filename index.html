@@ -1,238 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Demo placeholder-loading</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/placeholder-loading.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <style>
-      /* demo styles */
-      body { background-color: #e9ecef; }
-      header,
-      footer { padding: 20px 0; }
-      .container-fluid { max-width: 600px; }
-    </style>
-  </head>
-  <body>
+    <head>
+        <title>Demo placeholder-loading</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/placeholder-loading.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <style>
+            /* demo styles */
+            body { background-color: #e9ecef; }
+            header,
+            footer { padding: 20px 0; }
+            .container-fluid { max-width: 600px; }
+            .container-fluid .h4:not(:first-child) { margin-top: 30px; }
+        </style>
+    </head>
+    <body>
 
-    <header class="container-fluid">
-      <h1>Placeholder loading content demo</h1>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a class="github-button" href="https://github.com/zalog/placeholder-loading" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star zalog/placeholder-loading on GitHub">Star</a></li>
-        <li class="list-inline-item"><a class="github-button" href="https://github.com/zalog" data-size="large" data-show-count="true" aria-label="Follow @zalog on GitHub">Follow @zalog</a></li>
-      </ul>
-    </header>
+        <header class="container-fluid">
+            <h1>Placeholder loading content demo</h1>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a class="github-button" href="https://github.com/zalog/placeholder-loading" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star zalog/placeholder-loading on GitHub">Star</a></li>
+                <li class="list-inline-item"><a class="github-button" href="https://github.com/zalog" data-size="large" data-show-count="true" aria-label="Follow @zalog on GitHub">Follow @zalog</a></li>
+            </ul>
+        </header>
 
-    <main class="container-fluid">
+        <main class="container-fluid">
 
-      <h2 class="h4">Generic placeholder</h2>
+            <h2 class="h4">Generic placeholder</h2>
 
-      <div class="ph-item">
+            <div class="ph-item">
 
-        <div class="ph-col-12">
-          <div class="ph-picture"></div>
-          <div class="ph-row">
-            <div class="ph-col-6 big"></div>
-            <div class="ph-col-4 empty big"></div>
-            <div class="ph-col-2 big"></div>
-            <div class="ph-col-4"></div>
-            <div class="ph-col-8 empty"></div>
-            <div class="ph-col-6"></div>
-            <div class="ph-col-6 empty"></div>
-            <div class="ph-col-12"></div>
-          </div>
-        </div>
+                <div class="ph-col-12">
+                    <div class="ph-picture"></div>
+                    <div class="ph-row">
+                        <div class="ph-col-6 big"></div>
+                        <div class="ph-col-4 empty big"></div>
+                        <div class="ph-col-2 big"></div>
+                        <div class="ph-col-4"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-6"></div>
+                        <div class="ph-col-6 empty"></div>
+                        <div class="ph-col-12"></div>
+                    </div>
+                </div>
 
-      </div>
-
-      <h2 class="h4">Placeholder in a external twitter bootstrap grid</h2>
-
-      <div class="row">
-        <div class="col-12 col-sm-6">
-
-          <div class="ph-item">
-            <div class="ph-col-12">
-              <div class="ph-picture"></div>
-              <div class="ph-row">
-                <div class="ph-col-4"></div>
-                <div class="ph-col-8 empty"></div>
-                <div class="ph-col-12"></div>
-              </div>
             </div>
-            <div class="ph-col-2">
-              <div class="ph-avatar"></div>
+
+            <h2 class="h4">Placeholder in a external Bootstrap grid</h2>
+
+            <div class="row">
+                <div class="col-12 col-sm-6">
+
+                    <div class="ph-item">
+                        <div class="ph-col-12">
+                            <div class="ph-picture"></div>
+                            <div class="ph-row">
+                                <div class="ph-col-4"></div>
+                                <div class="ph-col-8 empty"></div>
+                                <div class="ph-col-12"></div>
+                            </div>
+                        </div>
+                        <div class="ph-col-2">
+                            <div class="ph-avatar"></div>
+                        </div>
+                        <div>
+                            <div class="ph-row">
+                                <div class="ph-col-12"></div>
+                                <div class="ph-col-2"></div>
+                                <div class="ph-col-10 empty"></div>
+                                <div class="ph-col-8 big"></div>
+                                <div class="ph-col-4 big empty"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-sm-6">
+
+                    <div class="ph-item">
+                        <div class="ph-col-12">
+                            <div class="ph-picture"></div>
+                            <div class="ph-row">
+                                <div class="ph-col-4"></div>
+                                <div class="ph-col-8 empty"></div>
+                                <div class="ph-col-12"></div>
+                            </div>
+                        </div>
+                        <div class="ph-col-2">
+                            <div class="ph-avatar"></div>
+                        </div>
+                        <div>
+                            <div class="ph-row">
+                                <div class="ph-col-12"></div>
+                                <div class="ph-col-2"></div>
+                                <div class="ph-col-10 empty"></div>
+                                <div class="ph-col-8 big"></div>
+                                <div class="ph-col-4 big empty"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div>
-              <div class="ph-row">
-                <div class="ph-col-12"></div>
-                <div class="ph-col-2"></div>
-                <div class="ph-col-10 empty"></div>
-                <div class="ph-col-8 big"></div>
-                <div class="ph-col-4 big empty"></div>
-              </div>
+
+            <h2 class="h4">Placeholder without wrapper or animation</h2>
+
+            <div class="ph-col">
+                <div class="ph-picture"></div>
+                <div class="ph-row">
+                    <div class="ph-col-6 big"></div>
+                    <div class="ph-col-4 empty big"></div>
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-4"></div>
+                    <div class="ph-col-8 empty"></div>
+                    <div class="ph-col-6"></div>
+                    <div class="ph-col-6 empty"></div>
+                    <div class="ph-col-12"></div>
+                </div>
             </div>
-          </div>
 
-        </div>
-        <div class="col-12 col-sm-6">
+            <h2 class="h4">Other placeholder examples</h2>
 
-          <div class="ph-item">
-            <div class="ph-col-12">
-              <div class="ph-picture"></div>
-              <div class="ph-row">
-                <div class="ph-col-4"></div>
-                <div class="ph-col-8 empty"></div>
-                <div class="ph-col-12"></div>
-              </div>
+            <div class="ph-item">
+
+                <div class="ph-col-12">
+                    <div class="ph-picture"></div>
+                </div>
+
+                <div class="ph-col-2">
+                    <div class="ph-avatar"></div>
+                </div>
+
+                <div>
+                    <div class="ph-row">
+                        <div class="ph-col-4"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-6"></div>
+                        <div class="ph-col-6 empty"></div>
+                        <div class="ph-col-2"></div>
+                        <div class="ph-col-10 empty"></div>
+                    </div>
+                </div>
+
+                <div class="ph-col-12">
+                    <div class="ph-row">
+                        <div class="ph-col-10 big"></div>
+                        <div class="ph-col-2 empty big"></div>
+                        <div class="ph-col-4"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-6"></div>
+                        <div class="ph-col-6 empty"></div>
+                        <div class="ph-col-12"></div>
+                    </div>
+                </div>
+
             </div>
-            <div class="ph-col-2">
-              <div class="ph-avatar"></div>
+
+            <div class="ph-item">
+
+                <div class="ph-col-2">
+                    <div class="ph-avatar"></div>
+                </div>
+
+                <div>
+                    <div class="ph-row">
+                        <div class="ph-col-4"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-6"></div>
+                        <div class="ph-col-6 empty"></div>
+                        <div class="ph-col-2"></div>
+                        <div class="ph-col-10 empty"></div>
+                    </div>
+                </div>
+
+                <div class="ph-col-12">
+                    <div class="ph-picture"></div>
+                    <div class="ph-row">
+                        <div class="ph-col-10 big"></div>
+                        <div class="ph-col-2 empty big"></div>
+                        <div class="ph-col-4"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-6"></div>
+                        <div class="ph-col-6 empty"></div>
+                        <div class="ph-col-12"></div>
+                    </div>
+                </div>
+
+                <div class="ph-col-4">
+                    <div class="ph-picture"></div>
+                </div>
+
+                <div>
+                    <div class="ph-row">
+                        <div class="ph-col-6"></div>
+                        <div class="ph-col-6 empty"></div>
+                        <div class="ph-col-2"></div>
+                        <div class="ph-col-10 empty"></div>
+                        <div class="ph-col-8"></div>
+                        <div class="ph-col-4 empty"></div>
+                        <div class="ph-col-12"></div>
+                    </div>
+                </div>
+
             </div>
-            <div>
-              <div class="ph-row">
-                <div class="ph-col-12"></div>
-                <div class="ph-col-2"></div>
-                <div class="ph-col-10 empty"></div>
-                <div class="ph-col-8 big"></div>
-                <div class="ph-col-4 big empty"></div>
-              </div>
+
+            <div class="ph-item">
+
+                <div class="ph-col-2">
+                    <div class="ph-avatar"></div>
+                </div>
+
+                <div>
+                    <div class="ph-row">
+                        <div class="ph-col-4"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-6"></div>
+                        <div class="ph-col-6 empty"></div>
+                        <div class="ph-col-2"></div>
+                        <div class="ph-col-10 empty"></div>
+                    </div>
+                </div>
+
+                <div class="ph-col-12">
+                    <div class="ph-picture"></div>
+                    <div class="ph-row">
+                        <div class="ph-col-10 big"></div>
+                        <div class="ph-col-2 empty big"></div>
+                        <div class="ph-col-4"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-6"></div>
+                        <div class="ph-col-6 empty"></div>
+                        <div class="ph-col-12"></div>
+                    </div>
+                </div>
+
             </div>
-          </div>
 
-        </div>
-      </div>
+        </main>
 
-      <h2 class="h4">Other placeholder examples</h2>
+        <footer class="container-fluid text-center">
+            <ul class="list-unstyled">
+                <li><a class="github-button" href="https://github.com/zalog/placeholder-loading" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star zalog/placeholder-loading on GitHub">Star</a></li>
+                <li><a class="github-button" href="https://github.com/zalog" data-size="large" data-show-count="true" aria-label="Follow @zalog on GitHub">Follow @zalog</a></li>
+                <li><a href="https://github.com/zalog/placeholder-loading">github.com/zalog/placeholder-loading</a></li>
+            </ul>
+        </footer>
 
-      <div class="ph-item">
+        <a href="https://github.com/zalog/placeholder-loading" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
-        <div class="ph-col-12">
-          <div class="ph-picture"></div>
-        </div>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-        <div class="ph-col-2">
-          <div class="ph-avatar"></div>
-        </div>
-
-        <div>
-          <div class="ph-row">
-            <div class="ph-col-4"></div>
-            <div class="ph-col-8 empty"></div>
-            <div class="ph-col-6"></div>
-            <div class="ph-col-6 empty"></div>
-            <div class="ph-col-2"></div>
-            <div class="ph-col-10 empty"></div>
-          </div>
-        </div>
-
-        <div class="ph-col-12">
-          <div class="ph-row">
-            <div class="ph-col-10 big"></div>
-            <div class="ph-col-2 empty big"></div>
-            <div class="ph-col-4"></div>
-            <div class="ph-col-8 empty"></div>
-            <div class="ph-col-6"></div>
-            <div class="ph-col-6 empty"></div>
-            <div class="ph-col-12"></div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="ph-item">
-
-        <div class="ph-col-2">
-          <div class="ph-avatar"></div>
-        </div>
-
-        <div>
-          <div class="ph-row">
-            <div class="ph-col-4"></div>
-            <div class="ph-col-8 empty"></div>
-            <div class="ph-col-6"></div>
-            <div class="ph-col-6 empty"></div>
-            <div class="ph-col-2"></div>
-            <div class="ph-col-10 empty"></div>
-          </div>
-        </div>
-
-        <div class="ph-col-12">
-          <div class="ph-picture"></div>
-          <div class="ph-row">
-            <div class="ph-col-10 big"></div>
-            <div class="ph-col-2 empty big"></div>
-            <div class="ph-col-4"></div>
-            <div class="ph-col-8 empty"></div>
-            <div class="ph-col-6"></div>
-            <div class="ph-col-6 empty"></div>
-            <div class="ph-col-12"></div>
-          </div>
-        </div>
-
-        <div class="ph-col-4">
-          <div class="ph-picture"></div>
-        </div>
-
-        <div>
-          <div class="ph-row">
-            <div class="ph-col-6"></div>
-            <div class="ph-col-6 empty"></div>
-            <div class="ph-col-2"></div>
-            <div class="ph-col-10 empty"></div>
-            <div class="ph-col-8"></div>
-            <div class="ph-col-4 empty"></div>
-            <div class="ph-col-12"></div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="ph-item">
-
-        <div class="ph-col-2">
-          <div class="ph-avatar"></div>
-        </div>
-
-        <div>
-          <div class="ph-row">
-            <div class="ph-col-4"></div>
-            <div class="ph-col-8 empty"></div>
-            <div class="ph-col-6"></div>
-            <div class="ph-col-6 empty"></div>
-            <div class="ph-col-2"></div>
-            <div class="ph-col-10 empty"></div>
-          </div>
-        </div>
-
-        <div class="ph-col-12">
-          <div class="ph-picture"></div>
-          <div class="ph-row">
-            <div class="ph-col-10 big"></div>
-            <div class="ph-col-2 empty big"></div>
-            <div class="ph-col-4"></div>
-            <div class="ph-col-8 empty"></div>
-            <div class="ph-col-6"></div>
-            <div class="ph-col-6 empty"></div>
-            <div class="ph-col-12"></div>
-          </div>
-        </div>
-
-      </div>
-
-    </main>
-
-    <footer class="container-fluid text-center">
-      <ul class="list-unstyled">
-        <li><a class="github-button" href="https://github.com/zalog/placeholder-loading" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star zalog/placeholder-loading on GitHub">Star</a></li>
-        <li><a class="github-button" href="https://github.com/zalog" data-size="large" data-show-count="true" aria-label="Follow @zalog on GitHub">Follow @zalog</a></li>
-        <li><a href="https://github.com/zalog/placeholder-loading">github.com/zalog/placeholder-loading</a></li>
-      </ul>
-    </footer>
-
-    <a href="https://github.com/zalog/placeholder-loading" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-  </body>
+    </body>
 </html>
