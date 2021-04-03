@@ -17,23 +17,23 @@ const src = './src';
 const dist = './dist';
 
 const contributors = (() => {
-      if ( typeof packageJson.contributors == "undefined" ) return false;
-      let output = '';
-      for (let i = 0; i < packageJson.contributors.length; i++) {
-        if ( i > 0 ) output += ", ";
-        output += packageJson.contributors[i];
-      }
-      return " * Contributors: " + output;
-    })();
+  if ( typeof packageJson.contributors == "undefined" ) return false;
+  let output = '';
+  for (let i = 0; i < packageJson.contributors.length; i++) {
+    if ( i > 0 ) output += ", ";
+    output += packageJson.contributors[i];
+  }
+  return " * Contributors: " + output;
+})();
 let banner = [
-      "/**",
-      " * " + packageJson.name + " v" + packageJson.version,
-      " * Author: " + packageJson.author,
-      " * License: " + packageJson.license
-    ];
-  if ( contributors ) banner.push(contributors);
-  banner.push(" **/", "");
-  banner = banner.join("\n");
+  "/**",
+  " * " + packageJson.name + " v" + packageJson.version,
+  " * Author: " + packageJson.author,
+  " * License: " + packageJson.license
+];
+if ( contributors ) banner.push(contributors);
+banner.push(" **/", "");
+banner = banner.join("\n");
 
 const copyChanged = (file) => {
   if (!file) return;
