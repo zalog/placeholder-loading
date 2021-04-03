@@ -11,7 +11,9 @@
     "commit": "npm run commit:version && npm run commit:build",
     "deploy:github": "git subtree push --prefix dist origin gh-pages",
     "deploy:npm": "npm publish",
-    "deploy": "npm run deploy:github && npm run deploy:npm"
+    "deploy": "npm run deploy:github && npm run deploy:npm",
+    "lint": "npm run lint:css",
+    "lint:css": "stylelint 'src/scss/*.scss'"
   },
   "keywords": [
     "placeholder",
@@ -39,6 +41,11 @@
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "postcss": "^8.2.9"
+    "postcss": "^8.2.9",
+    "stylelint": "^13.12.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-scss": "^3.19.0"
   }
 }

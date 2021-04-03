@@ -4,7 +4,7 @@ Simple and flexible, css only, content placeholder loading animation.
 
 ## Demo
 
-https://zalog.github.io/placeholder-loading/
+<https://zalog.github.io/placeholder-loading/>
 
 Take a look at this examples, but keep in mind that it's flexible enough to play with elements as you need.
 
@@ -25,9 +25,11 @@ You can change the order, add avatar or image, change text bar sizes, etc.
 ## Installing
 
 ### Via npm
+
 - `npm install placeholder-loading --save`
 - `@import "~/node_modules/placeholder-loading/src/scss/placeholder-loading";` - please modify the path accordingly
 - change sass variables if you need so:
+
 ```scss
 $ph-direction:            ltr !default;
 $ph-bg:                   #fff !default;
@@ -42,7 +44,7 @@ $ph-spacer:               15px !default;
 
 $ph-avatar-border-radius: 50% !default;
 
-$ph-animation-duration:   .8s !default;
+$ph-animation-duration:   0.8s !default;
 ```
 
 ### Via bower
@@ -50,8 +52,10 @@ $ph-animation-duration:   .8s !default;
 Just replace npm with bower: `bower install placeholder-loading --save`
 
 ### Via cdn
-- https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css
-- or https://cdn.jsdelivr.net/npm/placeholder-loading/dist/css/placeholder-loading.min.css
+
+- <https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css>
+- or <https://cdn.jsdelivr.net/npm/placeholder-loading/dist/css/placeholder-loading.min.css>
+
 ```html
 <head>
     <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
@@ -88,14 +92,14 @@ A simple html markup would be something like this:
 
 ## Built With
 
-* [SASS](http://sass-lang.com/)
-* [Node.js](https://nodejs.org/)
-* [Gulp](https://gulpjs.com/)
-* [postcss](https://github.com/postcss/postcss)
-* [autoprefixer](https://github.com/postcss/autoprefixer)
-* [cssnano](https://github.com/ben-eb/cssnano)
-* [browser-sync](https://www.browsersync.io/)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [SASS](http://sass-lang.com/)
+- [Node.js](https://nodejs.org/)
+- [Gulp](https://gulpjs.com/)
+- [postcss](https://github.com/postcss/postcss)
+- [autoprefixer](https://github.com/postcss/autoprefixer)
+- [cssnano](https://github.com/ben-eb/cssnano)
+- [browser-sync](https://www.browsersync.io/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Contributing
 
@@ -107,11 +111,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Catalin Zalog** - *Initial work* - [zalog.ro](http://zalog.ro/)
+- **Catalin Zalog** - *Initial work* - [zalog.ro](http://zalog.ro/)
 
 See also the list of [contributors](https://github.com/zalog/placeholder-loading/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-

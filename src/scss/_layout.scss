@@ -1,23 +1,23 @@
 .ph-item {
-    &, *,
-    ::after, ::before {
+    &,
+    *,
+    ::after,
+    ::before {
         box-sizing: border-box;
     }
 
-    direction: $ph-direction;
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: $ph-gutter;
     padding: $ph-gutter ($ph-gutter / 2) ($ph-gutter - $ph-spacer) ($ph-gutter / 2);
     overflow: hidden;
-    margin-bottom: $ph-gutter;
+    direction: $ph-direction;
     background-color: $ph-bg;
     border: $ph-border;
     border-radius: $ph-border-radius;
 
     &::before {
-        content: " ";
-        pointer-events: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -26,17 +26,19 @@
         z-index: 1;
         width: 500%;
         margin-left: -250%;
+        background: linear-gradient(to right, rgba($ph-bg, 0) 46%, rgba($ph-bg, 0.35) 50%, rgba($ph-bg, 0) 54%) 50% 50%;
         animation: phAnimation $ph-animation-duration linear infinite;
-        background: linear-gradient(to right, rgba($ph-bg, 0) 46%, rgba($ph-bg, .35) 50%, rgba($ph-bg, 0) 54%) 50% 50%;
+        content: " ";
+        pointer-events: none;
     }
 
     > * {
-        flex: 1 1 auto;
         display: flex;
+        flex: 1 1 auto;
         flex-flow: column;
+        margin-bottom: $ph-spacer;
         padding-right: ($ph-gutter / 2);
         padding-left: ($ph-gutter / 2);
-        margin-bottom: $ph-spacer;
     }
 }
 
@@ -50,10 +52,12 @@
         margin-top: ($ph-spacer / 2);
         background-color: $ph-color;
     }
+
     .big,
     &.big div {
         height: 20px;
     }
+
     .empty {
         background-color: rgba($ph-bg, 0);
     }
@@ -68,7 +72,9 @@
 @for $i from 1 through $ph-cols {
     @if $ph-cols-remove-odd and $i % 2 == 0 {
         @include ph-make-col($i, $ph-cols);
-    } @else if not $ph-cols-remove-odd {
+    }
+
+    @else if not $ph-cols-remove-odd {
         @include ph-make-col($i, $ph-cols);
     }
 }
@@ -77,6 +83,7 @@
 // and remove direction from `.ph-item`. This is a breaking change
 [class*="ph-col"] {
     direction: $ph-direction;
+
     > * {
         + .ph-row {
             margin-top: 0;
@@ -92,14 +99,14 @@
     position: relative;
     width: 100%;
     min-width: 60px;
+    overflow: hidden;
     background-color: $ph-color;
     border-radius: $ph-avatar-border-radius;
-    overflow: hidden;
 
     &::before {
-        content: " ";
         display: block;
         padding-top: 100%;
+        content: " ";
     }
 }
 
@@ -113,6 +120,7 @@
     0% {
         transform: translate3d(-30%, 0, 0);
     }
+
     100% {
         transform: translate3d(30%, 0, 0);
     }
