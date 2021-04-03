@@ -16,7 +16,7 @@ const packageJson = require('./package.json');
 const src = './src';
 const dist = './dist';
 
-const contributors = (function() {
+const contributors = (() => {
       if ( typeof packageJson.contributors == "undefined" ) return false;
       let output = '';
       for (let i = 0; i < packageJson.contributors.length; i++) {
@@ -35,7 +35,7 @@ let banner = [
   banner.push(" **/", "");
   banner = banner.join("\n");
 
-const copyChanged = function(file) {
+const copyChanged = (file) => {
   if (!file) return;
 
   return gulp.src(file, {base: src})
@@ -45,57 +45,47 @@ const copyChanged = function(file) {
 
 
 
-function clean() {
-  return del(
-      [
-        dist + '/**/*',
-        '!' + dist + '/.git/'
-      ],
-      {force: true}
-    );
-}
+const clean = () => del(
+  [
+    dist + '/**/*',
+    '!' + dist + '/.git/'
+  ],
+  {force: true}
+);
 
-function html() {
-  return gulp.src(src + '/*.html')
-    .pipe(gulp.dest(dist));
-}
+const html = () => gulp.src(src + '/*.html')
+  .pipe(gulp.dest(dist));
 
-function cssCompile() {
-  return gulp.src(src + '/scss/placeholder-loading.scss')
-    .pipe(csscompile())
-    .pipe(gulp.dest(dist + '/css/'))
-    .pipe(browsersync.stream());
-}
+const cssCompile = () => gulp.src(src + '/scss/placeholder-loading.scss')
+  .pipe(csscompile())
+  .pipe(gulp.dest(dist + '/css/'))
+  .pipe(browsersync.stream());
 
-function cssOptimize() {
-  return gulp.src(dist + '/css/placeholder-loading.css')
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(header(banner))
-    .pipe(gulp.dest(dist + '/css/'))
-    // min
-    .pipe(postcss([
-      autoprefixer(),
-      cssnano()
-    ]))
-    .pipe(header(banner))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(dist + '/css/'));
-}
+const cssOptimize = () => gulp.src(dist + '/css/placeholder-loading.css')
+  .pipe(postcss([
+    autoprefixer()
+  ]))
+  .pipe(header(banner))
+  .pipe(gulp.dest(dist + '/css/'))
+  // min
+  .pipe(postcss([
+    autoprefixer(),
+    cssnano()
+  ]))
+  .pipe(header(banner))
+  .pipe(rename({suffix: '.min'}))
+  .pipe(gulp.dest(dist + '/css/'));
 
 const css = gulp.series(cssCompile, cssOptimize);
 
-function serve() {
-  browsersync.init({
-    server: dist,
-    notify: false,
-    reloadDelay: 500,
-    ghostMode: false
-  });
-}
+const serve = () => browsersync.init({
+  server: dist,
+  notify: false,
+  reloadDelay: 500,
+  ghostMode: false
+});
 
-function watch() {
+const watch = () => {
   gulp.watch(src + '/*.html')
     .on('change', copyChanged);
   gulp.watch(src + '/scss/**/*', cssCompile);
