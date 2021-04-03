@@ -16,7 +16,7 @@ const gulp = require('gulp'),
   src = './src',
   dist = './dist';
 
-var contributors = (function() {
+const contributors = (function() {
       if ( typeof packageJson.contributors == "undefined" ) return false;
       let output = '';
       for (let i = 0; i < packageJson.contributors.length; i++) {
@@ -35,7 +35,7 @@ var contributors = (function() {
   banner.push(" **/", "");
   banner = banner.join("\n");
 
-var copyChanged = function(file) {
+const copyChanged = function(file) {
   if (!file) return;
 
   return gulp.src(file, {base: src})
