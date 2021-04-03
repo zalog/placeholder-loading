@@ -1,20 +1,20 @@
 'use strict';
 
-const gulp = require('gulp'),
-  csscompile = require('gulp-sass'),
-  postcss = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer'),
-  cssnano = require('cssnano'),
-  header = require('gulp-header'),
-  rename = require('gulp-rename'),
-  del = require('del'),
-  browsersync = require('browser-sync').create(),
-  gulputil = require('gulp-util'),
+const gulp = require('gulp');
+const csscompile = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const header = require('gulp-header');
+const rename = require('gulp-rename');
+const del = require('del');
+const browsersync = require('browser-sync').create();
+const gulputil = require('gulp-util');
 
-  packageJson = require('./package.json'),
+const packageJson = require('./package.json');
 
-  src = './src',
-  dist = './dist';
+const src = './src';
+const dist = './dist';
 
 const contributors = (function() {
       if ( typeof packageJson.contributors == "undefined" ) return false;
@@ -24,8 +24,8 @@ const contributors = (function() {
         output += packageJson.contributors[i];
       }
       return " * Contributors: " + output;
-    })(),
-  banner = [
+    })();
+let banner = [
       "/**",
       " * " + packageJson.name + " v" + packageJson.version,
       " * Author: " + packageJson.author,
