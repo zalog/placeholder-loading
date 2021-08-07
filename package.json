@@ -33,7 +33,7 @@
   "homepage": "https://github.com/zalog/placeholder-loading#readme",
   "devDependencies": {
     "autoprefixer": "^10.3.1",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.5",
     "cssnano": "^5.0.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
