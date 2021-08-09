@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .ph-item {
     &,
     *,
@@ -10,7 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: $ph-gutter;
-    padding: $ph-gutter ($ph-gutter / 2) ($ph-gutter - $ph-spacer) ($ph-gutter / 2);
+    padding: $ph-gutter ($ph-gutter * 0.5) ($ph-gutter - $ph-spacer) ($ph-gutter * 0.5);
     overflow: hidden;
     direction: $ph-direction;
     background-color: $ph-bg;
@@ -37,19 +39,19 @@
         flex: 1 1 auto;
         flex-flow: column;
         margin-bottom: $ph-spacer;
-        padding-right: ($ph-gutter / 2);
-        padding-left: ($ph-gutter / 2);
+        padding-right: ($ph-gutter * 0.5);
+        padding-left: ($ph-gutter * 0.5);
     }
 }
 
 .ph-row {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -($ph-spacer / 2);
+    margin-top: -($ph-spacer * 0.5);
 
     div {
         height: 10px;
-        margin-top: ($ph-spacer / 2);
+        margin-top: ($ph-spacer * 0.5);
         background-color: $ph-color;
     }
 
@@ -65,7 +67,7 @@
 
 @mixin ph-make-col($size, $columns) {
     .ph-col-#{$size} {
-        flex: 0 0 percentage($size / $columns);
+        flex: 0 0 percentage(math.div($size, $columns));
     }
 }
 
@@ -90,7 +92,7 @@
         }
 
         + * {
-            margin-top: ($ph-spacer / 2);
+            margin-top: ($ph-spacer * 0.5);
         }
     }
 }

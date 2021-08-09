@@ -1,7 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
-const csscompile = require('gulp-sass');
+const csscompile = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
