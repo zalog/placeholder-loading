@@ -29,7 +29,7 @@
         width: 500%;
         margin-left: -250%;
         background: linear-gradient(to right, rgba($ph-bg, 0) 46%, rgba($ph-bg, 0.35) 50%, rgba($ph-bg, 0) 54%) 50% 50%;
-        animation: phAnimation $ph-animation-duration linear infinite;
+        animation: ph-animation $ph-animation-duration linear infinite;
         content: " ";
         pointer-events: none;
     }
@@ -67,7 +67,7 @@
 
 @mixin ph-make-col($size, $columns) {
     .ph-col-#{$size} {
-        flex: 0 0 percentage(math.div($size, $columns));
+        flex: 0 0 math.percentage(math.div($size, $columns));
     }
 }
 
@@ -118,7 +118,7 @@
     background-color: $ph-color;
 }
 
-@keyframes phAnimation {
+@keyframes ph-animation {
     0% {
         transform: translate3d(-30%, 0, 0);
     }
