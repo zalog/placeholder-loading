@@ -1,5 +1,5 @@
 /**
- * placeholder-loading v0.5.0
+ * placeholder-loading v0.6.0
  * Author: Zalog (https://www.zalog.ro/)
  * License: MIT
  **/
@@ -7,8 +7,8 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px;
   padding: 30px 15px 15px 15px;
+  margin-bottom: 30px;
   overflow: hidden;
   direction: ltr;
   background-color: #fff;
@@ -30,19 +30,19 @@
   z-index: 1;
   width: 500%;
   margin-left: -250%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%;
-  -webkit-animation: phAnimation 0.8s linear infinite;
-          animation: phAnimation 0.8s linear infinite;
-  content: " ";
   pointer-events: none;
+  content: " ";
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%;
+  -webkit-animation: ph-animation 0.8s linear infinite;
+          animation: ph-animation 0.8s linear infinite;
 }
 .ph-item > * {
   display: flex;
   flex: 1 1 auto;
   flex-flow: column;
-  margin-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
+  margin-bottom: 15px;
 }
 
 .ph-row {
@@ -116,7 +116,7 @@
   background-color: #ced4da;
 }
 
-@-webkit-keyframes phAnimation {
+@-webkit-keyframes ph-animation {
   0% {
     transform: translate3d(-30%, 0, 0);
   }
@@ -125,7 +125,7 @@
   }
 }
 
-@keyframes phAnimation {
+@keyframes ph-animation {
   0% {
     transform: translate3d(-30%, 0, 0);
   }
