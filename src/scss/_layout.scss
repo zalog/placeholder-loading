@@ -11,8 +11,8 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: $ph-gutter;
     padding: $ph-gutter ($ph-gutter * 0.5) ($ph-gutter - $ph-spacer) ($ph-gutter * 0.5);
+    margin-bottom: $ph-gutter;
     overflow: hidden;
     direction: $ph-direction;
     background-color: $ph-bg;
@@ -28,19 +28,19 @@
         z-index: 1;
         width: 500%;
         margin-left: -250%;
+        pointer-events: none;
+        content: " ";
         background: linear-gradient(to right, rgba($ph-bg, 0) 46%, rgba($ph-bg, 0.35) 50%, rgba($ph-bg, 0) 54%) 50% 50%;
         animation: ph-animation $ph-animation-duration linear infinite;
-        content: " ";
-        pointer-events: none;
     }
 
     > * {
         display: flex;
         flex: 1 1 auto;
         flex-flow: column;
-        margin-bottom: $ph-spacer;
         padding-right: ($ph-gutter * 0.5);
         padding-left: ($ph-gutter * 0.5);
+        margin-bottom: $ph-spacer;
     }
 }
 
