@@ -1,6 +1,6 @@
 {
   "name": "placeholder-loading",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Simple and flexible, css only, content placeholder loading animation.",
   "scripts": {
     "start": "gulp",
@@ -42,7 +42,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "postcss": "^8.4.14",
-    "sass": "^1.53.0",
+    "sass": "^1.82.0",
     "stylelint": "^14.9.1",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-recommended-scss": "^6.0.0",

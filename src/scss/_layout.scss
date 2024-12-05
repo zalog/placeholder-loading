@@ -1,13 +1,7 @@
+@use "variables" as *;
 @use "sass:math";
 
 .ph-item {
-    &,
-    *,
-    ::after,
-    ::before {
-        box-sizing: border-box;
-    }
-
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -18,6 +12,13 @@
     background-color: $ph-bg;
     border: $ph-border;
     border-radius: $ph-border-radius;
+
+    &,
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
 
     &::before {
         position: absolute;
