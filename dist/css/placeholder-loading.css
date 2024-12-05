@@ -1,5 +1,5 @@
 /**
- * placeholder-loading v0.6.0
+ * placeholder-loading v0.7.0
  * Author: Zalog (https://www.zalog.ro/)
  * License: MIT
  **/
@@ -12,7 +12,7 @@
   overflow: hidden;
   direction: ltr;
   background-color: #fff;
-  border: 1px solid #e6e6e6;
+  border: 1px solid rgb(229.5, 229.5, 229.5);
   border-radius: 2px;
 }
 .ph-item,
